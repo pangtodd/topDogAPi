@@ -31,14 +31,13 @@ function TopDogs(){
     } else {
       return (
       <React.Fragment>
-        {/* <h1>hi!</h1> */}
-        <h1> Top Dogs </h1>
+        <h1> Top rescues </h1>
         <ul>
-          <li>topDogs[0].name</li>
           {topDogs.map((dog, index) =>
           <li key={index}>
             <h3>{dog.name}</h3>
-            <h3>{dog.animal_type}</h3>
+            <p>{dog.animal_type} ({dog.breed})</p>
+            <p>about {dog.name}: "{dog.comments}"</p>
           </li>
           )}
         </ul>
